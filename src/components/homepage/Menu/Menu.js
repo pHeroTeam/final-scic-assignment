@@ -33,9 +33,7 @@ const Menu = () => {
                             <div className="card-custom">
                                 <img src={ food.image} alt="Person" className="card__image" />
                                 <p className="card__name">{ food.name}</p>
-
-
-                                <button className="btn-custom draw-border">Book</button>
+                                <button className="btn-custom draw-border rounded">Book</button>
                             </div>
                         </Col>
                         )
