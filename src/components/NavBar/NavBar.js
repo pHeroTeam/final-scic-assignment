@@ -20,6 +20,9 @@ const NavBar = () => {
         <NavLink to="/contact" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">   
             Contact
         </NavLink>
+        <NavLink to="/myOrder" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">   
+            My Order
+        </NavLink>
         <NavLink to="/login" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">   
             LogIn
         </NavLink>

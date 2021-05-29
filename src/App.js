@@ -11,8 +11,9 @@ import NavBar from './components/NavBar/NavBar';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
-
 import Login from './components/Login/Login';
+import MyOrder from './components/MyOrder/MyOrder';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 export const UserContext = createContext();
@@ -33,6 +34,9 @@ function App() {
         <Route path="/contact" exact>
           <Contact></Contact>
         </Route>
+        <PrivateRoute path="/myOrder" exact>
+          <MyOrder></MyOrder>
+        </PrivateRoute>
         <Route path="/login" exact>
           <Login></Login>
         </Route>
