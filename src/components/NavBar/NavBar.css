@@ -1,4 +1,3 @@
-.selected{
-    background-color: orangered;
-    padding: 10px;
+.bg-orange{
+    background-color: orangered !important;
 }
