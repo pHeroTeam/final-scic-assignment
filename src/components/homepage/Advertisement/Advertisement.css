@@ -1,0 +1,6 @@
+.adImage{
+    transition: transform .5s;
+}
+.adImage:hover{
+    transform: scale(1.1)
+}
