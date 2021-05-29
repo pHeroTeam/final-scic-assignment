@@ -9,6 +9,7 @@ import HomePage from './components/homepage/HomePage';
 import NavBar from './components/NavBar/NavBar';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Contact></Contact>
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
 
   );

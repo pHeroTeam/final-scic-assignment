@@ -10,13 +10,13 @@ const Advertisement = () => {
         <Container className="mt-5 mb-5">
             <Row>
                 <Col md={4} lg={4} sm={6} xs={12}>
-                    <img src={ ad001} alt="" className="img-fluid adImage"/>
+                    <img src={ ad001} alt="" className="img-fluid adImage rounded shadow"/>
                 </Col>
                 <Col md={4} lg={4} sm={6} xs={12}>
-                <img src={ ad002} alt="" className="img-fluid adImage"/>
+                <img src={ ad002} alt="" className="img-fluid adImage rounded shadow"/>
                 </Col>
                 <Col md={4} lg={4} sm={6} xs={12}>
-                <img src={ ad003} alt="" className="img-fluid adImage"/>
+                <img src={ ad003} alt="" className="img-fluid adImage rounded shadow"/>
                 </Col>
 
             </Row>
