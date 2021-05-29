@@ -1,0 +1,14 @@
+.bannerTitle{
+    color:orangered;
+    font-size: 3.5rem;
+}
+.bannerSubTitle{
+    color:#282828;
+    font-size: 2rem;
+}
+.textBg{
+    background-image: url('https://i.ibb.co/5GgZskX/textBg.jpg');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+}
