@@ -34,9 +34,9 @@ const Banner = () => {
         <Carousel>
 
             {
-                bannerData.map(banner => 
+                bannerData.map((banner, index) => 
                 
-                    <Carousel.Item>
+                    <Carousel.Item key={ index}>
                         <Row>
                             <div className="col-md-5 textBg col-sm-12 col-12 col-lg-5">
                         <Carousel.Caption>

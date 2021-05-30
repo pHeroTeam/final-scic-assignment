@@ -1,10 +1,9 @@
-import React,{ createContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import HomePage from './components/homepage/HomePage';
 import NavBar from './components/NavBar/NavBar';
@@ -17,31 +16,39 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 export const UserContext = createContext();
+import Checkout from './components/Checkout/Checkout';
+import NoMatch from './components/NoMatch/NoMatch';
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    <Router>
-      <NavBar></NavBar>
-      <Switch>
-        <Route path="/" exact>
-          <HomePage></HomePage>
-        </Route>
-        <Route path="/about" exact>
-          <About></About>
-        </Route>
-        <Route path="/contact" exact>
-          <Contact></Contact>
-        </Route>
-        <PrivateRoute path="/myOrder" exact>
-          <MyOrder></MyOrder>
-        </PrivateRoute>
-        <Route path="/login" exact>
-          <Login></Login>
-        </Route>
+      <Router>
+        <NavBar></NavBar>
+        <Switch>
+          <Route path="/" exact>
+            <HomePage></HomePage>
+          </Route>
+          <Route path="/about" exact>
+            <About></About>
+          </Route>
+          <Route path="/checkout/:name/:price" exact>
+            <Checkout></Checkout>
+          </Route>
+          <Route path="/contact" exact>
+            <Contact></Contact>
+          </Route>
+          <PrivateRoute path="/myOrder" exact>
+            <MyOrder></MyOrder>
+          </PrivateRoute>
+          <Route path="/login" exact>
+            <Login></Login>
+          </Route>
+          <Route path="*" exact>
+              <NoMatch></NoMatch>
+          </Route>
       </Switch>
-      <Footer></Footer>
+          <Footer></Footer>
     </Router>
     </UserContext.Provider>
 
