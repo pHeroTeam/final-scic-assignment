@@ -30,10 +30,10 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
 
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
       <NavBar></NavBar>
       <Switch>
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <NavBar></NavBar>
         <Switch>
@@ -55,6 +55,7 @@ function App() {
           <Route path="/login" exact>
             <Login></Login>
           </Route>
+          <Route path="/allOrders" exact>
             <SideBarAndOrder></SideBarAndOrder>
           </Route>
           <Route path="/allOrders" exact>
