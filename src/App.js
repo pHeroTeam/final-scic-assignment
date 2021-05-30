@@ -13,11 +13,11 @@ import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
 import MyOrder from './components/MyOrder/MyOrder';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Checkout from './components/Checkout/Checkout';
+import NoMatch from './components/NoMatch/NoMatch';
 
 
 export const UserContext = createContext();
-import Checkout from './components/Checkout/Checkout';
-import NoMatch from './components/NoMatch/NoMatch';
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
