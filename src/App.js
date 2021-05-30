@@ -2,8 +2,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import HomePage from './components/homepage/HomePage';
 import NavBar from './components/NavBar/NavBar';
@@ -25,6 +24,7 @@ function App() {
         </Route>
         <Route path="/checkout/:name/:price" exact>
           <Checkout></Checkout>
+        </Route>
         <Route path="/contact" exact>
           <Contact></Contact>
         </Route>
