@@ -28,8 +28,8 @@ const NavBar = () => {
             <NavLink to="/contact" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">
               Contact
             </NavLink>
-            <NavLink to="/myOrder" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">
-              My Order
+            <NavLink to="/yourOrder" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">
+              Your Order
             </NavLink>
             {
               loggedInUser.email ? <h4 className="bg-orange p-3 mx-3 rounded font-weight-bold text-white">{loggedInUser.name}</h4> :

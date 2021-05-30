@@ -39,9 +39,9 @@ function App() {
           <Route path="/about" exact>
             <About></About>
           </Route>
-          <Route path="/checkout/:name/:price" exact>
+          <PrivateRoute path="/checkout/:name/:price" exact>
             <Checkout></Checkout>
-          </Route>
+          </PrivateRoute>
           <Route path="/contact" exact>
             <Contact></Contact>
           </Route>
@@ -51,16 +51,16 @@ function App() {
           <Route path="/login" exact>
             <Login></Login>
           </Route>
-          <Route path="/dashboard" exact>
+          <PrivateRoute path="/dashboard" exact>
             <SideBarAndOrder></SideBarAndOrder>
-          </Route>
+          </PrivateRoute>
           <Route path="/allOrders" exact>
             <ShowAllOrder></ShowAllOrder>
           </Route>
 
-          <Route path="/yourOrder" exact>
+          <PrivateRoute path="/yourOrder" exact>
             <UserOrder></UserOrder>
-          </Route>
+          </PrivateRoute>
 
           <Route path="/addNewFoods" exact>
             <AddFoodForm></AddFoodForm>

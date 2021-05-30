@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './Menu.css'
 import food001 from '../../../images/food001.jpg'
@@ -34,10 +34,21 @@ const Menu = () => {
     const handleBuy = (name, price) => {
         history.push(`/checkout/${name}/${price}`);
     }
+    const [menus, setMenus] = useState(null)
+    useEffect(()=>{
+        const url =`  https://ancient-savannah-78897.herokuapp.com/manageFoodShowUi`;
+        fetch(url)
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            setMenus(data)
+        })
+    },[])
+    
 
-    const menus = useSelector((state) => {
-        return state.orders.menuList;
-    });
+    // const menus = useSelector((state) => {
+    //     return state.orders.menuList;
+    // });
     
 
     return (
@@ -48,7 +59,7 @@ const Menu = () => {
                     menus?.map((food, index) =>
                         <Col md={4} lg={4} sm={6} xs={12} className="mb-5" key={ index}>
                             <div className="card-custom">
-                                <img src={ food.image} alt="Person" className="card__image" />
+                                <img src={ food.img} alt="Person" className="card__image" />
                                 <p className="card__name">{ food.name}</p>
                                 <p className="text-center">Price: { food.price}BDT</p>
                                 <button className="btn-custom draw-border rounded" onClick={() => handleBuy(food.name, food.price)}>Book</button>

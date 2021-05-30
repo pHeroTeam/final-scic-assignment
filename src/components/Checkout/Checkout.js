@@ -1,17 +1,33 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { enGB } from 'date-fns/locale'
 import { DatePicker } from 'react-nice-dates'
 import 'react-nice-dates/build/style.css'
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import { UserContext } from "../../App";
 
 const Checkout = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     const { name, price } = useParams();
     const [date, setDate] = useState();
     const handleReset = () => {
         setDate(new Date())
     }
-    console.log(name, price, date)
+    console.log(name, price, date);
+
+    const handleOrder = () => {
+        const successOrder = { ...loggedInUser, date, name, price};
+        fetch('https://ancient-savannah-78897.herokuapp.com/allSuccessOrders',{
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify(successOrder)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+    }
     return (
         <div>
             <Container>
@@ -27,7 +43,7 @@ const Checkout = () => {
                     />
                 )}
                 </DatePicker>
-                <button className="btn btn-success my-5">Order Now</button>
+                <button className="btn btn-success my-5" onClick={handleOrder}>Order Now</button>
                 </div>
             </Container>
             
