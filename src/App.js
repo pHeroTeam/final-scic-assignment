@@ -18,7 +18,7 @@ import NoMatch from './components/NoMatch/NoMatch';
 import SideBarAndOrder from './components/Dashboard/AllOrder/SideBarAndOrder';
 import ShowAllOrder from './components/Dashboard/AllOrder/ShowAllOrder';
 import UserOrder from './components/Dashboard/UserOrder/UserOrder';
-import AddFoodForm from './components/Dashboard/AddFoodFrom/AddFoodFrom';
+import AddFoodForm from './components/Dashboard/AddFoodForm/AddFoodForm';
 import Review from './components/Dashboard/Review/Review';
 import Update from './components/Dashboard/Update/Update';
 import ManageFood from './components/Dashboard/ManageFood/ManageFood';
@@ -58,9 +58,9 @@ function App() {
             <ShowAllOrder></ShowAllOrder>
           </Route>
 
-          <PrivateRoute path="/yourOrder" exact>
+          <Route path="/yourOrder" exact>
             <UserOrder></UserOrder>
-          </PrivateRoute>
+          </Route>
 
           <Route path="/addNewFoods" exact>
             <AddFoodForm></AddFoodForm>
