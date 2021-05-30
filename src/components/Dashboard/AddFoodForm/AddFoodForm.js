@@ -6,11 +6,31 @@ import './AddFoodForm.css';
 
 const AddFoodForm = () => {
 
-    // post url=http://localhost:4002/allFoodAdd
+    // post url=  https://ancient-savannah-78897.herokuapp.com/allFoodAdd
     const { register, handleSubmit, watch, errors } = useForm();
     const [imgUrl,setImgUrl]=useState(null);
-    const onSubmit = data => console.log(data);
-
+    
+    const onSubmit = data => {
+        console.log(data);
+        const eventData={
+            name:data.name,
+            price:data.price,
+            img:imgUrl
+        }
+        console.log(eventData);
+        const url =`  https://ancient-savannah-78897.herokuapp.com/allFoodAdd`
+        fetch(url,{
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify(eventData)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          if(data){
+            alert('new food add success')
+          }
+          console.log(data)})
+      };
     const handleImgUpload=(e)=>{
             console.log(e.target.files[0]);
             const imgData=new FormData();
