@@ -3,7 +3,7 @@ import SideBar from '../SideBar/SideBar';
 
 const UserOrder = () => {
     
-    // get http://localhost:4002/orderDetailShow?email='+loggedInUser.emai
+    // get   https://ancient-savannah-78897.herokuapp.com/orderDetailShow?email='+loggedInUser.emai
 
     return (
         <div className='row mr-4'>
