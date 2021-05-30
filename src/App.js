@@ -9,6 +9,7 @@ import HomePage from './components/homepage/HomePage';
 import NavBar from './components/NavBar/NavBar';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/about" exact>
           <About></About>
+        </Route>
+        <Route path="/checkout/:name/:price" exact>
+          <Checkout></Checkout>
         </Route>
       </Switch>
       <Footer></Footer>
