@@ -14,6 +14,9 @@ const NavBar = () => {
         <NavLink to="/" activeClassName="bg-orange" className="bg-white text-dark p-3 font-weight-bold rounded-lg">   
             Home
         </NavLink>
+        <NavLink to="/dashboard" activeClassName="bg-orange" className="bg-white text-dark p-3 font-weight-bold rounded-lg">   
+            Dashboard
+        </NavLink>
         <NavLink to="/about" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">   
             About
         </NavLink>
