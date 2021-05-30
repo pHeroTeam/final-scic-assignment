@@ -10,6 +10,7 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Checkout from './components/Checkout/Checkout';
+import NoMatch from './components/NoMatch/NoMatch';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/contact" exact>
           <Contact></Contact>
+        </Route>
+        <Route path="*" exact>
+          <NoMatch></NoMatch>
         </Route>
       </Switch>
       <Footer></Footer>
