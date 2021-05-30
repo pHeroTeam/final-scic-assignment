@@ -17,6 +17,9 @@ const NavBar = () => {
         <NavLink to="/about" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">   
             About
         </NavLink>
+        <NavLink to="/contact" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">   
+            Contact
+        </NavLink>
       </Nav>
     </Navbar.Collapse>
   </Container>

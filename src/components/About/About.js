@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div style={{backgroundImage: `url("https://i.ibb.co/wwgnttc/About-Background.jpg")`, }} className="pb-5 h-100">
+        <div style={{backgroundImage: `url("https://i.ibb.co/wwgnttc/About-Background.jpg")` }} className="pb-5 h-100">
             <h1 className='text-center py-5 text-white'>OUR STORY OF PRIDE</h1>
             <div style={{backgroundColor:'#E67E22', borderRadius:"10px"}}  className ="container py-5 px-5">
                 <div className="row justify-content-between">
