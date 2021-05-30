@@ -33,9 +33,6 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
       <NavBar></NavBar>
-      <Switch>
-      <Router>
-        <NavBar></NavBar>
         <Switch>
           <Route path="/" exact>
             <HomePage></HomePage>
