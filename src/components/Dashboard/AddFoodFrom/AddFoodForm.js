@@ -2,9 +2,9 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import SideBar from '../SideBar/SideBar';
-import './AddFoodFrom.css';
+import './AddFoodForm.css';
 
-const AddFoodFrom = () => {
+const AddFoodForm = () => {
 
     // post url=  https://ancient-savannah-78897.herokuapp.com/allFoodAdd
     const { register, handleSubmit, watch, errors } = useForm();
@@ -67,4 +67,4 @@ const AddFoodFrom = () => {
     );
 };
 
-export default AddFoodFrom;
+export default AddFoodForm;
