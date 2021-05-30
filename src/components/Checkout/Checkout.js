@@ -7,7 +7,10 @@ import { useParams } from 'react-router-dom';
 
 const Checkout = () => {
     const { name, price } = useParams();
-    const [date, setDate] = useState()
+    const [date, setDate] = useState();
+    const handleReset = () => {
+        setDate(new Date())
+    }
     console.log(name, price, date)
     return (
         <div>
@@ -15,6 +18,7 @@ const Checkout = () => {
                 <h2 className="text-center text-success p-3 shadow bg-warning rounded my-5">You have selected {name} and the price is {price}.</h2>
                 <h3 className="text-center p-3 my-5">Please select a date below:</h3>
                 <div className="text-center bg-light shadow rounded p-5 m-5">
+                <button onClick={handleReset} className="btn btn-info m-2">Set today</button>
                 <DatePicker date={date} onDateChange={setDate} locale={enGB}>
                 {({ inputProps, focused }) => (
                     <input
