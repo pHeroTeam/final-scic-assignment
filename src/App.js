@@ -32,7 +32,6 @@ function App() {
 
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
-      
         <NavBar></NavBar>
         <Switch>
           <Route path="/" exact>
@@ -53,7 +52,7 @@ function App() {
           <Route path="/login" exact>
             <Login></Login>
           </Route>
-          <Route path="/allOrders" exact>
+          <Route path="/dashboard" exact>
             <SideBarAndOrder></SideBarAndOrder>
           </Route>
           <Route path="/allOrders" exact>
