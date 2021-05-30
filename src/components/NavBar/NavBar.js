@@ -18,20 +18,23 @@ const NavBar = () => {
           <Nav className="ml-auto">
             <NavLink to="/" activeClassName="bg-orange" className="bg-white text-dark p-3 font-weight-bold rounded-lg">
               Home
-        </NavLink>
+            </NavLink>
+            <NavLink to="/dashboard" activeClassName="bg-orange" className="bg-white text-dark p-3 font-weight-bold rounded-lg">
+              Dashboard
+            </NavLink>
             <NavLink to="/about" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">
               About
-        </NavLink>
+            </NavLink>
             <NavLink to="/contact" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">
               Contact
-        </NavLink>
+            </NavLink>
             <NavLink to="/myOrder" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">
               My Order
-        </NavLink>
+            </NavLink>
             {
-              loggedInUser.email ? <h4 className="bg-orange p-3 mx-3 rounded font-weight-bold text-white">{loggedInUser.name}</h4> : 
-              <NavLink to="/login" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">
-                LogIn
+              loggedInUser.email ? <h4 className="bg-orange p-3 mx-3 rounded font-weight-bold text-white">{loggedInUser.name}</h4> :
+                <NavLink to="/login" activeClassName="bg-orange text-white" className="p-3 font-weight-bold text-dark rounded-lg">
+                  LogIn
               </NavLink>
             }
           </Nav>

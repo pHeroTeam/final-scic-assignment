@@ -11,17 +11,27 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
-import MyOrder from './components/MyOrder/MyOrder';
+// import MyOrder from './components/MyOrder/MyOrder';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Checkout from './components/Checkout/Checkout';
 import NoMatch from './components/NoMatch/NoMatch';
 
+import Checkout from './components/Checkout/Checkout';
+import NoMatch from './components/NoMatch/NoMatch';
+import SideBarAndOrder from './components/Dashboard/AllOrder/SideBarAndOrder';
+import ShowAllOrder from './components/Dashboard/AllOrder/ShowAllOrder';
+import UserOrder from './components/Dashboard/UserOrder/UserOrder';
+import AddFoodForm from './components/Dashboard/AddFoodFrom/AddFoodFrom';
+import Review from './components/Dashboard/Review/Review';
+import Update from './components/Dashboard/Update/Update';
+import ManageFood from './components/Dashboard/ManageFood/ManageFood';
 
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
+
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <NavBar></NavBar>
@@ -38,18 +48,41 @@ function App() {
           <Route path="/contact" exact>
             <Contact></Contact>
           </Route>
-          <PrivateRoute path="/myOrder" exact>
+          {/* <PrivateRoute path="/myOrder" exact>
             <MyOrder></MyOrder>
-          </PrivateRoute>
+          </PrivateRoute> */}
           <Route path="/login" exact>
             <Login></Login>
           </Route>
-          <Route path="*" exact>
-              <NoMatch></NoMatch>
+          <Route path="/dashboard" exact>
+            <SideBarAndOrder></SideBarAndOrder>
           </Route>
-      </Switch>
-          <Footer></Footer>
-    </Router>
+          <Route path="/allOrders" exact>
+            <ShowAllOrder></ShowAllOrder>
+          </Route>
+
+          <PrivateRoute path="/yourOrder" exact>
+            <UserOrder></UserOrder>
+          </PrivateRoute>
+
+          <Route path="/addNewFoods" exact>
+            <AddFoodForm></AddFoodForm>
+          </Route>
+          <Route path="/manageFood" exact>
+            <ManageFood></ManageFood>
+          </Route>
+          <Route path="/review" exact>
+            <Review></Review>
+          </Route>
+          <Route path="/updateFood" exact>
+            <Update></Update>
+          </Route>
+          <Route path="*" exact>
+            <NoMatch></NoMatch>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </Router>
     </UserContext.Provider>
 
   );
